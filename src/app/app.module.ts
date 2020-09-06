@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { CampaignDisplayComponent } from './components/campaign-display/campaign-display.component';
 import { CampaignSignupComponent } from './components/campaign-signup/campaign-signup.component';
 import { CampaignThankyouComponent } from './components/campaign-thankyou/campaign-thankyou.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CampaignDisplayComponent,
     CampaignSignupComponent,
-    CampaignThankyouComponent
+    CampaignThankyouComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule
