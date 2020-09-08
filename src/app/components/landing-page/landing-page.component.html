@@ -1,5 +1,5 @@
 <h1>{{campaignTitle}}</h1>
 
-<app-campaign-display [hidden]='showSignupForm' signupButtonClicked='handleSignupButtonClick($event)'></app-campaign-display>
-<app-campaign-signup [hidden]='!showSignupForm' submitButtonClicked='showThankYou($event)'></app-campaign-signup>
-<app-campaign-thankyou [hidden]='formSubmitted'></app-campaign-thankyou>
+<app-campaign-display *ngIf='!showSignupForm' (signupButtonClicked)='handleSignupButtonClick($event)'></app-campaign-display>
+<app-campaign-signup *ngIf='showSignupForm && !formSubmitted' (submitButtonClicked)='showThankYou($event)'></app-campaign-signup>
+<app-campaign-thankyou *ngIf='formSubmitted'></app-campaign-thankyou>

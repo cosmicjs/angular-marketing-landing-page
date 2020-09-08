@@ -15,12 +15,12 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public handleSignupButtonClick($event): void {
-    this.showSignupForm = $event.value;
+  public handleSignupButtonClick(value): void {
+    this.showSignupForm = value;
   }
 
-  public showThankYou($event): void {
-    this.formSubmitted = $event.value;
+  public showThankYou(value): void {
+    this.formSubmitted = value;
   }
 
 }
