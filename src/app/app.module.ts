@@ -6,6 +6,7 @@ import { CampaignDisplayComponent } from './components/campaign-display/campaign
 import { CampaignSignupComponent } from './components/campaign-signup/campaign-signup.component';
 import { CampaignThankyouComponent } from './components/campaign-thankyou/campaign-thankyou.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
     LandingPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

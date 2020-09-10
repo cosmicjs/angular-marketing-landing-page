@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { CampaignService } from 'src/app/services/campaign.service';
 
 @Component({
   selector: 'app-campaign-signup',
@@ -7,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class CampaignSignupComponent implements OnInit {
   @Output() submitButtonClicked: EventEmitter<boolean> = new EventEmitter<boolean>();
-  constructor() { }
+  constructor(private campaignService: CampaignService) { }
 
   ngOnInit(): void {
   }

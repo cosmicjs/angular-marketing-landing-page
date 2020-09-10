@@ -1,5 +1,7 @@
-<h1>{{campaignTitle}}</h1>
+<h1>{{this.campaign.headline}}</h1>
 
 <app-campaign-display *ngIf='!showSignupForm' (signupButtonClicked)='handleSignupButtonClick($event)'></app-campaign-display>
 <app-campaign-signup *ngIf='showSignupForm && !formSubmitted' (submitButtonClicked)='showThankYou($event)'></app-campaign-signup>
 <app-campaign-thankyou *ngIf='formSubmitted'></app-campaign-thankyou>
+<div>
+</div>

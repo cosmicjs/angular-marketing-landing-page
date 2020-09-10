@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CampaignService } from 'src/app/services/campaign.service';
 
 @Component({
   selector: 'app-campaign-thankyou',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class CampaignThankyouComponent implements OnInit {
   public thankYouDetails = 'Here would be the text you display to your visitors after they complete your sign up form. You might want to tell them how you will be contacting them in future or that you won\'t sell their contact information. Or that you will be happy to erase their information. And don\'t forget to thank them for signing up!';
 
-  constructor() { }
+  constructor(private campaignService: CampaignService) { }
 
   ngOnInit(): void {
   }

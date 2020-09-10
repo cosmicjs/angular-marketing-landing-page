@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { CampaignService } from 'src/app/services/campaign.service';
 
 @Component({
   selector: 'app-campaign-display',
@@ -10,7 +11,7 @@ export class CampaignDisplayComponent implements OnInit {
 
   public heroImage = '';
   public campaignDetails = 'This is some information about the campaign and the organization. Some directions about signing up. Other things like that.';
-  constructor() { }
+  constructor(private campaignService: CampaignService) { }
 
   ngOnInit(): void {
   }
