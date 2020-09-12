@@ -1,6 +1,10 @@
-<div [ngSwitch]="field.type" class='field-group'>
-    <div *ngSwitchCase="'text'">
-        <label for='field.key'>{{field.title}}:</label>
-        <input type='text' name='{{field.key}}' />
+<div [formGroup]='formGroup'>
+    <label [attr.for]='field.key'>{{field.title}}:</label>
+    <div [ngSwitch]="field.type" class='field-group'>
+        <div *ngSwitchCase="'text'">
+            <input type='text' [formControlName]="field.key" [id]='field.key' />
+        </div>
+
+        <div class='error-message' *ngIf='!isValid' role="alert">{{field.title}} is required</div>
     </div>
 </div>

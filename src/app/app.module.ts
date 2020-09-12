@@ -8,6 +8,8 @@ import { CampaignThankyouComponent } from './components/campaign-thankyou/campai
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormFieldInputComponent } from './components/campaign-signup/form-field-input/form-field-input.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormFieldInputComponent } from './components/campaign-signup/form-field
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

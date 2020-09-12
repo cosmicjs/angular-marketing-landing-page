@@ -1,4 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 html, body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+}
+
+.btn {
+	background-color:whitesmoke;
+	border:1px solid #06045f;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Arial;
+	font-size: .75vw;
+	font-weight:bold;
+	padding:17px 70px;
+    text-decoration:none;
+    margin-top: 1vw
+}
+
+.btn:hover {
+    background-color: #06045f;
+    color: whitesmoke;
+
+}
+
+.btn:focus {
+    background-color: #06045f;
+    color: whitesmoke;
 }
