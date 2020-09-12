@@ -7,6 +7,7 @@ import { CampaignSignupComponent } from './components/campaign-signup/campaign-s
 import { CampaignThankyouComponent } from './components/campaign-thankyou/campaign-thankyou.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormFieldInputComponent } from './components/campaign-signup/form-field-input/form-field-input.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
     CampaignDisplayComponent,
     CampaignSignupComponent,
     CampaignThankyouComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    FormFieldInputComponent
   ],
   imports: [
     BrowserModule,

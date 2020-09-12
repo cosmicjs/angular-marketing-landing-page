@@ -11,11 +11,16 @@ export class LandingPageComponent implements OnInit {
   public showSignupForm = false;
   public formSubmitted = false;
   public campaign;
+  public loading = true;
 
   constructor(private campaignService: CampaignService) { }
 
   ngOnInit(): void {
-    this.campaignService.getCampaignData().subscribe(res => this.campaign = res);
+    this.campaignService.getCampaignData().subscribe(res => {
+      console.log(res);
+      this.campaign = res;
+      this.loading = false;
+    });
   }
 
   public handleSignupButtonClick(value): void {

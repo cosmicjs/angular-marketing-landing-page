@@ -1,5 +1,9 @@
-<img class='hero-image' [src]='heroImage' alt='Campaign Image'/>
-<main>
-    <div>{{campaignDetails}}</div>
-    <button class='btn-sign-up'(click)='buttonClicked()'>Click Here To Sign Up</button>
-</main>
+<div class='hero'>
+    <div class='hero-overlay'>
+        <main>
+            <div>{{campaign.signupMessage}}</div>
+            <button class='btn-sign-up'(click)='buttonClicked()'>Click Here To Sign Up</button>
+        </main>
+    </div>
+    <img *ngIf="campaign.heroImageUrl" class='hero-image' [src]='campaign.heroImageUrl' alt='Campaign Image'/>
+</div>

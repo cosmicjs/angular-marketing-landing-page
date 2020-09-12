@@ -1,5 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { CampaignService } from 'src/app/services/campaign.service';
+import { Campaign } from 'src/app/models/campaign';
 
 @Component({
   selector: 'app-campaign-display',
@@ -7,13 +8,16 @@ import { CampaignService } from 'src/app/services/campaign.service';
   styleUrls: ['./campaign-display.component.scss']
 })
 export class CampaignDisplayComponent implements OnInit {
+  @Input() campaign: Campaign;
   @Output() signupButtonClicked: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   public heroImage = '';
-  public campaignDetails = 'This is some information about the campaign and the organization. Some directions about signing up. Other things like that.';
+  public campaignDetails = 'This is some default text. If you are seeing this, your campaign is missing the signup message data.';
   constructor(private campaignService: CampaignService) { }
 
   ngOnInit(): void {
+    this.heroImage = this.campaign.heroImageUrl;
+    this.campaignDetails = this.campaign.signupMessage;
   }
 
   public buttonClicked(): void {

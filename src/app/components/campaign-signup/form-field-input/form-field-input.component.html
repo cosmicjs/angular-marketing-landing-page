@@ -1,0 +1,6 @@
+<div [ngSwitch]="field.type" class='field-group'>
+    <div *ngSwitchCase="'text'">
+        <label for='field.key'>{{field.title}}:</label>
+        <input type='text' name='{{field.key}}' />
+    </div>
+</div>
