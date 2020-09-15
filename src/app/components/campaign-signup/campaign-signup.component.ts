@@ -25,7 +25,13 @@ export class CampaignSignupComponent implements OnInit {
   }
 
   public submitForm(): void {
-    this.submitButtonClicked.emit(true);
+    this.campaignService.saveContact(this.formFields, this.form).subscribe(contactResponse => {
+      console.log(contactResponse);
+      this.campaignService.addContactToCampaign(contactResponse).subscribe(updateResponse => {
+        console.log(updateResponse);
+        this.submitButtonClicked.emit(true);
+      })
+    })
   }
 
 }

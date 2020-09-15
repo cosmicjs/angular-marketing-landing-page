@@ -3,8 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { config } from 'src/config/config';
 import { Campaign } from '../models/campaign';
 import { ContactFormField } from '../models/contact-form-field';
-import { Observable } from 'rxjs';
-import { map, filter } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { flatMap, map } from 'rxjs/operators';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +35,8 @@ export class CampaignService {
           signupMessage: data.object.metadata.sign_up_message,
           thankYouMessage: data.object.metadata.thank_you_message,
           heroImageUrl: data.object.metadata.hero_image.url,
-          materials: null
+          materials: null,
+          signup_list: data.object.metadata.signup_list
         }
       )
     ));
@@ -51,4 +53,51 @@ export class CampaignService {
     );
 
   }
+
+  public saveContact(fields: ContactFormField[], form: FormGroup): Observable<any> {
+    this.getFieldValuesFromForm(fields, form);
+    const firstName = fields.find(f => f.key === 'first_name').value;
+    const lastName = fields.find(f => f.key === 'last_name').value;
+    let contactPostBody = {
+      slug:  `${firstName}-${lastName}-${new Date().getTime()}`,
+      type_slug: "contacts",
+      title: `${firstName} ${lastName}`,
+      metafields: fields,
+      write_key: config.writeKey
+    };
+    return this.http.post(`${this.cosmicUrl}${this.bucketSlug}/add-object`, contactPostBody);
+  }
+
+  public addContactToCampaign(contactResponse: any): Observable<any> {
+    return this.getCampaignData()
+                .pipe(
+                  flatMap(response => {
+                    this.campaign = response;
+                    let contactsList = this.campaign.signup_list ? this.campaign.signup_list.map(l => l._id).join() + ',' + contactResponse.object._id  : contactResponse.object._id;
+                    let objects = this.campaign.signup_list ? this.campaign.signup_list.push(contactResponse) : contactResponse;
+                    let postBody = {
+                      slug: this.campaign.slug,
+                      metafields: [
+                        {
+                          type: 'objects',
+                          key: 'signup_list',
+                          title: 'Signup List',
+                          value: contactsList
+                        }
+                      ],
+                      write_key: config.writeKey
+                    };
+                    return this.http.patch(`${this.cosmicUrl}${this.bucketSlug}/edit-object-metafields`, postBody);
+                  })
+                );
+  }
+
+  private getFieldValuesFromForm(fields: ContactFormField[], form: FormGroup) {
+    fields.forEach(f => {
+      f.value = form.controls[f.key].value;
+    });
+  }
+
+
+
 }

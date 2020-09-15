@@ -1,3 +1,4 @@
+import { Contact } from './contact';
 import { Material } from './materials';
 
 export interface Campaign {
@@ -10,5 +11,6 @@ export interface Campaign {
     thankYouMessage: string;
     heroImageUrl: string;
     materials: Material[];
+    signup_list: Contact[];
 }
 
