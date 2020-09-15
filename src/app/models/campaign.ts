@@ -1,5 +1,5 @@
 import { Contact } from './contact';
-import { Material } from './materials';
+import { Material } from './material';
 
 export interface Campaign {
     slug: string;

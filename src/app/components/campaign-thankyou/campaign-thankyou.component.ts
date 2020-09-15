@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CampaignService } from 'src/app/services/campaign.service';
 import { Campaign } from 'src/app/models/campaign';
+import { Material } from 'src/app/models/material';
 
 @Component({
   selector: 'app-campaign-thankyou',
@@ -15,6 +16,13 @@ export class CampaignThankyouComponent implements OnInit {
 
   ngOnInit(): void {
     this.thankYouDetails = this.campaign.thankYouMessage;
+    this.downloadMaterials(this.campaign.materials);
+  }
+
+  public downloadMaterials(materials: Material[]) {
+    materials.forEach(m => {
+      window.location.href = m.metadata.file.url;
+    });
   }
 
 }

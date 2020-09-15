@@ -12,7 +12,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class CampaignService {
   public campaign;
-  private campaignName = 'my-first-campaign';
+  private campaignName = config.campaignName;
   private bucketSlug = config.bucketSlug;
   private cosmicUrl = config.cosmicUrl;
 
@@ -35,7 +35,7 @@ export class CampaignService {
           signupMessage: data.object.metadata.sign_up_message,
           thankYouMessage: data.object.metadata.thank_you_message,
           heroImageUrl: data.object.metadata.hero_image.url,
-          materials: null,
+          materials: data.object.metadata.campaign_materials,
           signup_list: data.object.metadata.signup_list
         }
       )
