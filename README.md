@@ -8,6 +8,7 @@ downloaded to the user's machine.
 ## Cosmic JS Setup
 
 [![Powered by Cosmic](https://web-assets.cosmicjs.com/images/powered-by-cosmic.svg)](https://app.cosmicjs.com/add-bucket?import_bucket=5f52a4e110dbb60008716d5f)
+
 More information to come.
 
 ## Application Configuration
@@ -18,4 +19,3 @@ Configuration for the application is currently handled in a config.ts file locat
 - Slug of Campaign Name
 - Bucket read_key
 - Bucket write_key
-
