@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { config } from 'src/config/config';
 import { Campaign } from '../models/campaign';
 import { ContactFormField } from '../models/contact-form-field';
 import { Observable, of } from 'rxjs';
 import { flatMap, map } from 'rxjs/operators';
 import { FormGroup } from '@angular/forms';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CampaignService {
   public campaign;
-  private campaignName = config.campaignName;
-  private bucketSlug = config.bucketSlug;
-  private cosmicUrl = config.cosmicUrl;
+  private campaignName = environment.COSMIC_CAMPAIGN_NAME;
+  private bucketSlug = environment.COSMIC_BUCKET;
+  private cosmicUrl = environment.COSMIC_API_URL;
 
   constructor(private http: HttpClient) {
   }
@@ -22,7 +22,7 @@ export class CampaignService {
   public getCampaignData(): Observable<Campaign> {
     return this.http.get<any>(this.cosmicUrl + this.bucketSlug + '/object/' + this.campaignName, {
       params: {
-        read_key: config.readKey
+        read_key: environment.COSMIC_READ_KEY
       }
     }).pipe(
       map(data => (
@@ -44,7 +44,7 @@ export class CampaignService {
   public getSignupForm(): Observable<ContactFormField[]> {
     return this.http.get<any>(this.cosmicUrl + this.bucketSlug + '/object-types', {
       params: {
-        read_key: config.readKey
+        read_key: environment.COSMIC_READ_KEY
       }
     })
     .pipe(
@@ -62,7 +62,7 @@ export class CampaignService {
       type_slug: "contacts",
       title: `${firstName} ${lastName}`,
       metafields: fields,
-      write_key: config.writeKey
+      write_key: environment.COSMIC_WRITE_KEY
     };
     return this.http.post(`${this.cosmicUrl}${this.bucketSlug}/add-object`, contactPostBody);
   }
@@ -84,7 +84,7 @@ export class CampaignService {
                           value: contactsList
                         }
                       ],
-                      write_key: config.writeKey
+                      write_key: environment.COSMIC_WRITE_KEY
                     };
                     return this.http.patch(`${this.cosmicUrl}${this.bucketSlug}/edit-object-metafields`, postBody);
                   })
