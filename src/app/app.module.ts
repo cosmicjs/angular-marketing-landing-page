@@ -10,11 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormFieldInputComponent } from './components/campaign-signup/form-field-input/form-field-input.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { AppConfigService } from './services/app-config.service';
 
-export function initConfig(appConfigService: AppConfigService) {
-  return () => appConfigService.loadConfig();
-}
 
 @NgModule({
   declarations: [
@@ -31,14 +27,7 @@ export function initConfig(appConfigService: AppConfigService) {
     ReactiveFormsModule,
     CommonModule
   ],
-  providers: [
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initConfig,
-      deps: [ AppConfigService ],
-      multi: true
-    }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
