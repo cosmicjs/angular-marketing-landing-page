@@ -153,3 +153,5 @@ dist
 .history
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,angular,node
+src/environments/environment.prod.ts
+src/environments/environment.ts

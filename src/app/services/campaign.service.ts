@@ -12,9 +12,9 @@ import { environment } from 'src/environments/environment';
 })
 export class CampaignService {
   public campaign;
-  private campaignName = environment.COSMIC_CAMPAIGN_NAME;
-  private bucketSlug = environment.COSMIC_BUCKET;
-  private cosmicUrl = environment.COSMIC_API_URL;
+  private campaignName = environment.campaignName;
+  private bucketSlug = environment.bucketSlug;
+  private cosmicUrl = environment.cosmicAPI_URL;
 
   constructor(private http: HttpClient) {
   }
@@ -22,7 +22,7 @@ export class CampaignService {
   public getCampaignData(): Observable<Campaign> {
     return this.http.get<any>(this.cosmicUrl + this.bucketSlug + '/object/' + this.campaignName, {
       params: {
-        read_key: environment.COSMIC_READ_KEY
+        read_key: environment.readKey
       }
     }).pipe(
       map(data => (
@@ -44,7 +44,7 @@ export class CampaignService {
   public getSignupForm(): Observable<ContactFormField[]> {
     return this.http.get<any>(this.cosmicUrl + this.bucketSlug + '/object-types', {
       params: {
-        read_key: environment.COSMIC_READ_KEY
+        read_key: environment.readKey
       }
     })
     .pipe(
@@ -62,7 +62,7 @@ export class CampaignService {
       type_slug: "contacts",
       title: `${firstName} ${lastName}`,
       metafields: fields,
-      write_key: environment.COSMIC_WRITE_KEY
+      write_key: environment.writeKey
     };
     return this.http.post(`${this.cosmicUrl}${this.bucketSlug}/add-object`, contactPostBody);
   }
@@ -84,7 +84,7 @@ export class CampaignService {
                           value: contactsList
                         }
                       ],
-                      write_key: environment.COSMIC_WRITE_KEY
+                      write_key: environment.writeKey
                     };
                     return this.http.patch(`${this.cosmicUrl}${this.bucketSlug}/edit-object-metafields`, postBody);
                   })
