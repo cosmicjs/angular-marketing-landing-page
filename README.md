@@ -15,8 +15,8 @@ More information to come.
 
 Locally, the application requires a .env file holding the environment variables needed for the application to communicate with the Cosmic JS api. When moving to deployment, the application will pull the values from the server's environment variables and create an environment file for the application so it will have access to these values. The list of what variables are needed are the following:
 
-  COSMIC_BUCKET=<Cosmic JS Bucket Slug>
-  COSMIC_READ_KEY=<Your Read Key>
-  COSMIC_WRITE_KEY=<Your Write Key>
-  COSMIC_API_URL=https://api.cosmicjs.com/v1/
-  COSMIC_CAMPAIGN_NAME=<Campaign Object Slug>
+  * COSMIC_BUCKET=<Cosmic JS Bucket Slug>
+  * COSMIC_READ_KEY=<Your Read Key>
+  * COSMIC_WRITE_KEY=<Your Write Key>
+  * COSMIC_API_URL=https://api.cosmicjs.com/v1/
+  * COSMIC_CAMPAIGN_NAME=<Campaign Object Slug>
