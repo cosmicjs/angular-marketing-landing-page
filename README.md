@@ -21,5 +21,5 @@ COSMIC_BUCKET=<your-bucket-slug>
 COSMIC_READ_KEY=<your-bucket-read-key>
 COSMIC_WRITE_KEY=<your-bucket-write-key>
 COSMIC_API_URL=https://api.cosmicjs.com/v1/
-COSMIC_CAMPAIGN_NAME=<campaign-object-slug>
+COSMIC_CAMPAIGN_NAME=<campaign-object-slug> # find this in the Campaigns > My First Campaign in the Cosmic Dashboard
 ```
