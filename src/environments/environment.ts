@@ -1,8 +1,8 @@
 export const environment = {
    cosmicAPI_URL: 'https://api.cosmicjs.com/v1/',
-   bucketSlug: 'landing-page-project',
-   readKey: 'K17yks9JdAu0kHkvhJOQZJRD0XhYIfoHzplwP7zpMAKlI5Z0fW',
-   writeKey: 'rnkFnTQpjXYixeaRpE2ScwsfNWoiTa1DBzWvAD9ejoxipcZpMl',
+   bucketSlug: 'marketing-landing-page',
+   readKey: 'YrEi98KND9ZpR8c9O89XVbzWHGXHIuxiP35k5T33GhiQ0gn9wN',
+   writeKey: 'AF631cVEaO8n3kHAF3uA1pTu5bAY58xWxULdtaTC7tG1uw2OZL',
    campaignName: 'my-first-campaign',
    production: 'undefined'
 };

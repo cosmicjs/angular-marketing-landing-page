@@ -5,11 +5,11 @@
 .hero-overlay {
     position: absolute;
     z-index: 0;
-    font-size: 1vw;
+    font-size: 30px;
     transform: translateY(13vw);
     text-align: center;
     background-color: whitesmoke;
-    padding: 2vw 0;
+    padding: 30px 0;
     width: 100%;
 }
 
@@ -28,7 +28,7 @@
 	cursor:pointer;
 	color:black;
 	font-family:Arial;
-	font-size: .75vw;
+	font-size: 20px;
 	font-weight:bold;
 	padding:17px 70px;
     text-decoration:none;

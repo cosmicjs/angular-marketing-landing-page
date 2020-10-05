@@ -1,4 +1,4 @@
-<h1 *ngIf='campaign'>{{campaign.headline}}</h1>
+<h1 class="site-title" *ngIf='campaign'>{{campaign.headline}}</h1>
 
 <app-campaign-display *ngIf='!showSignupForm && !loading' (signupButtonClicked)='handleSignupButtonClick($event)' [campaign]='campaign'></app-campaign-display>
 <app-campaign-signup *ngIf='showSignupForm && !formSubmitted && !loading' (submitButtonClicked)='showThankYou($event)' [campaign]='campaign'></app-campaign-signup>
