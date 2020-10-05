@@ -3,8 +3,11 @@
 
 This application is a simple landing page built using [Angular](https://angular.io/) and the [Cosmic Headless CMS](https://www.cosmicjs.com/) that allows an organization to build a mailing list of users and in exchange deliver some content to the user via a download.
 
-The application owner sets up a campaign in Cosmic which feeds details in the application. When a user visits the sight they will receive information about the campaign and be presented with a form to sign up for the offered content. The user's information is saved in a Cosmic object and attached to the campaign object. Once the information is submitted, the offered content stored in Cosmic is
-downloaded to the user's machine.
+## How it works
+1. The application owner sets up a campaign in Cosmic which feeds details in the application.
+2. When a user visits the sight they will receive information about the campaign and be presented with a form to sign up for the offered content.
+3. The user's information is saved in a Cosmic object and attached to the campaign object.
+4. Once the information is submitted, the offered content stored in Cosmic is downloaded to the user's machine.
 
 ## Cosmic Setup
 One click install to a new Bucket with the following button:
