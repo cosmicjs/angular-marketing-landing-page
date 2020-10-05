@@ -9,8 +9,6 @@ downloaded to the user's machine.
 
 [![Powered by Cosmic](https://web-assets.cosmicjs.com/images/powered-by-cosmic.svg)](https://app.cosmicjs.com/add-bucket?import_bucket=5f52a4e110dbb60008716d5f)
 
-More information to come.
-
 ## Application Configuration
 
 Locally, the application requires a `.env` file holding the environment variables needed for the application to communicate with the Cosmic API. When moving to deployment, the application will pull the values from the server's environment variables and create an environment file for the application so it will have access to these values. The list of what variables are needed are the following (find these in your Cosmic dashboard located in [Bucket Basic Settings > API Access](https://app.cosmicjs.com/login)):
@@ -32,3 +30,8 @@ npm i
 npm start
 ```
 Go to your local running instance at https://localhost:4200.
+
+## Deploy to Netlify
+Deploy to Netlify using the following button. You will need to add your Bucket slug and Bucket read key as environment variables. Find these in <i>Basic Settings &gt; API Access.</i>
+
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/cosmicjs/vue-blog-netlify-template" rel="noopener noreferrer" target="_blank"><img src="https://cdn.cosmicjs.com/787493f0-c064-11ea-9a05-6f8a16b0b14c-deploy-button.svg" style="width: 150px;"></a>
