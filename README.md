@@ -1,7 +1,7 @@
 # Angular Marketing Landing Page
 ![Screenshot](https://imgix.cosmicjs.com/33f05e90-0749-11eb-ae60-6dcb8c7018a0-landing-page-3.png?w=1200&auto=format)
 
-This application is a simple landing page built using [Angular](https://angular.io/) and the [Cosmic Headless CMS](https://www.cosmicjs.com/) that allows an organization to build a mailing list of users and in exchange deliver some content to the user via a download.
+This application is a simple landing page built using [Angular](https://angular.io/) and the [Cosmic Headless CMS](https://www.cosmicjs.com/) that allows an organization to build a mailing list of users and in exchange deliver some premium content to the user via a download.
 
 ## How it works
 1. The application owner sets up a campaign up in [Cosmic](https://www.cosmicjs.com/) which feeds details into the landing page.
