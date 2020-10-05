@@ -13,7 +13,7 @@ More information to come.
 
 ## Application Configuration
 
-Locally, the application requires a .env file holding the environment variables needed for the application to communicate with the Cosmic API. When moving to deployment, the application will pull the values from the server's environment variables and create an environment file for the application so it will have access to these values. The list of what variables are needed are the following:
+Locally, the application requires a .env file holding the environment variables needed for the application to communicate with the Cosmic API. When moving to deployment, the application will pull the values from the server's environment variables and create an environment file for the application so it will have access to these values. The list of what variables are needed are the following (find these in your Cosmic dashboard located in [Bucket Basic Settings > API Access](https://app.cosmicjs.com/login)):
 
   * COSMIC_BUCKET=\<Cosmic Bucket Slug>
   * COSMIC_READ_KEY=\<Your Read Key>
