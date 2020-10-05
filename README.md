@@ -28,8 +28,8 @@ COSMIC_CAMPAIGN_NAME=<campaign-object-slug> # find this in the Campaigns > My Fi
 ## Getting Started
 Clone this repo, install and run.
 ```
-git clone https://github.com/cosmicjs/cosmic-landing-pag
-cd cosmic-landing-pag
+git clone https://github.com/cosmicjs/angular-marketing-landing-page
+cd angular-marketing-landing-page
 npm i
 npm start
 ```
@@ -38,4 +38,4 @@ Go to your local running instance at https://localhost:4200.
 ## Deploy to Netlify
 Deploy to Netlify using the following button. You will need to add your Bucket slug and Bucket read key as environment variables. Find these in <i>Basic Settings &gt; API Access.</i>
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/cosmicjs/vue-blog-netlify-template" rel="noopener noreferrer" target="_blank"><img src="https://cdn.cosmicjs.com/787493f0-c064-11ea-9a05-6f8a16b0b14c-deploy-button.svg" style="width: 150px;"></a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/cosmicjs/angular-marketing-landing-page" rel="noopener noreferrer" target="_blank"><img src="https://cdn.cosmicjs.com/787493f0-c064-11ea-9a05-6f8a16b0b14c-deploy-button.svg" style="width: 150px;"></a>
