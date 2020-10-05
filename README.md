@@ -6,8 +6,10 @@ The application owner sets up a campaign in Cosmic which feeds details in the ap
 downloaded to the user's machine.
 
 ## Cosmic Setup
-
+One click install to a new Bucket with the following button:
 [![Powered by Cosmic](https://web-assets.cosmicjs.com/images/powered-by-cosmic.svg)](https://app.cosmicjs.com/add-bucket?import_bucket=5f52a4e110dbb60008716d5f)
+
+You can also view more details, and select this app in the [Cosmic App Marketplace](https://www.cosmicjs.com/apps/angular-marketing-landing-page).
 
 ## Application Configuration
 
