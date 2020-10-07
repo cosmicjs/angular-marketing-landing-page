@@ -1,3 +1,5 @@
-<h3>Enter Your Information For Your Gift</h3>
-<app-form-field-input *ngFor='let field of formFields' [field]='field' [formGroup]='form'></app-form-field-input>
-<button class='btn btn-submit-signup' (click)='submitForm()'>Signup For Your Gift</button>
+<div class="form-area">
+  <h3>Enter Your Information For Your Gift</h3>
+  <app-form-field-input *ngFor='let field of formFields' [field]='field' [formGroup]='form'></app-form-field-input>
+  <button class='btn btn-submit-signup' (click)='submitForm()'>Signup For Your Gift</button>
+</div>
